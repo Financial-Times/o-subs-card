@@ -14,14 +14,11 @@ const subsCard = function () {
 	expanders.forEach((expander) => {
 		expander.setAttribute('data-o-component', 'o-expander');
 		oExpander.init(expander, opts);
-
-		expander.addEventListener('oExpander.expand', () => {});
-		expander.addEventListener('oExpander.collapse', () => {});
 	})
 }
 
 const constructAll = function() {
-	SubsCard();
+	subsCard();
 	document.removeEventListener('o.DOMContentLoaded', constructAll);
 };
 
