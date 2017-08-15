@@ -10,6 +10,8 @@
 @import "src/scss/_themes";
 
 
+$o-subs-card-is-silent: true !default;
+
 
 @if ($o-subs-card-is-silent == false) {
 	.o-subs-card {
