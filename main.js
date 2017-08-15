@@ -1,6 +1,6 @@
 const oExpander = require('o-expander');
 
-const SubsCard = function () {
+const subsCard = function () {
 	const expanders = document.querySelectorAll('.o-subs-card__expander')
 	const opts = {
 		shrinkTo: 'hidden',
@@ -27,4 +27,4 @@ const constructAll = function() {
 
 document.addEventListener('o.DOMContentLoaded', constructAll);
 
-module.exports = SubsCard;
+module.exports = subsCard;
