@@ -5,9 +5,9 @@
 @import "o-expander/main";
 
 @import "src/scss/colors";
-@import "src/scss/_variables";
-@import "src/scss/_mixins";
-@import "src/scss/_themes";
+@import "src/scss/variables";
+@import "src/scss/mixins";
+@import "src/scss/themes";
 
 
 $o-subs-card-is-silent: true !default;
@@ -21,7 +21,7 @@ $o-subs-card-is-silent: true !default;
 	.o-subs-card--premium {
 		@include oSubsCardPremium;
 	}
-	
+
 	.o-subs-card--premium-plus {
 		@include oSubsCardPremiumPlus;
 	}

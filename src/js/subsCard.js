@@ -2,9 +2,13 @@ const oExpander = require('o-expander');
 
 class SubsCard {
 
-	constructor (SubsCard) {
-		this.SubsCard = SubsCard;
-		const expanders = document.querySelectorAll('.o-subs-card__expander');
+	constructor (rootEl) {
+		this.rootEl = rootEl;
+		this.setExpanders();
+	}
+
+	setExpanders() {
+		const expander = this.rootEl.querySelector('.o-subs-card__expander');
 		const opts = {
 			shrinkTo: 'hidden',
 			expandedToggleText: 'Read less',
@@ -14,11 +18,10 @@ class SubsCard {
 			contentClassName: 'o-subs-card__copy-details',
 		};
 
-		expanders.forEach((expander) => {
-			expander.setAttribute('data-o-component', 'o-expander');
-			oExpander.init(expander, opts);
-		});
+		expander.setAttribute('data-o-component', 'o-expander');
+		oExpander.init(expander, opts);
 	}
+
 
 	static init (rootEl) {
 		if (!rootEl) {

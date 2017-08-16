@@ -45,7 +45,7 @@ describe("SubsCard", () => {
 		});
 
 		it("single component when initialized with a root element", () => {
-			const subsCard = SubsCard.init('#element');
+			const subsCard = SubsCard.init('.o-subs-card');
 			proclaim.equal(subsCard instanceof SubsCard, true);
 		});
 	});
