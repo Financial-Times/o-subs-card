@@ -29,6 +29,15 @@
 		}
 	}
 
+	.o-subs-card__copy-pitch {
+		@include oColorsFor(o-subs-card-copy-pitch, background text, 80);
+		@include oTypographySans(0);
+		display: inline-block;
+		width: calc(100% - 28px);
+		text-align: center;
+		padding: 14px;
+	}
+
 	// Mobile first
 	.o-subs-card__copy-image {
 		display: none;
@@ -43,12 +52,12 @@
 	}
 
 	.o-subs-card__charge {
-		@include oTypographyPadding($top: 2, $bottom: 5);
+		@include oTypographyPadding($top: 2, $bottom: 1);
 		@include oTypographyMargin($top: 2);
 	}
 
 	.o-subs-card__charge__value {
-		font-weight: 600;
+		@include oTypographyMargin($top: 1);
 	}
 
 	.o-subs-card__select-button {
@@ -56,17 +65,6 @@
 		@include oButtonsCustomTheme(oColorsGetUseCase(o-subs-card-top-button, background), "white");
 		@include oTypographyMargin($top: 3);
 		width: calc(100% - 24px);
-	}
-
-	.o-subs-card__copy-pitch {
-		@include oColorsFor(o-subs-card-copy-pitch, background text, 80);
-		border-bottom: 1px solid oColorsMix(black, oColorsGetUseCase(o-subs-card-copy-pitch, background), 20);
-		text-align: left;
-		padding: 14px;
-
-		@include oGridRespondTo(L) {
-			display: none;
-		}
 	}
 
 	.o-subs-card__copy-details {
