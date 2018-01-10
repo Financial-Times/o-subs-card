@@ -31,12 +31,12 @@ The subs card will expand to fill the width of its containing element, so you wi
 	</div>
 	<div class="o-subs-card__copy-pitch">Access to FT.com on your desktop, mobile and tablet</div>
 	<div class="o-subs-card__expander">
-		<div class='o-subs-card__read-more'>Read more</div>
 		<div class="o-subs-card__copy-details">
 			<ul class="o-subs-card__copy-benefits">
 				<li>...</li>
 			</ul>
 		</div>
+		<div class='o-subs-card__read-more'>Read more</div>
 	</div>
 </div>
 ```
