@@ -53,9 +53,9 @@
 
 	.o-subs-card__select-button {
 		@include oButtons('big');
-		@include oButtonsCustomTheme(oColorsGetUseCase(o-subs-card-top, background), "white");
+		@include oButtonsCustomTheme(oColorsGetUseCase(o-subs-card-top-button, background), "white");
 		@include oTypographyMargin($top: 3);
-		width: calc(100% - 40px);
+		width: calc(100% - 24px);
 	}
 
 	.o-subs-card__copy-pitch {
@@ -84,7 +84,7 @@
 	.o-subs-card__read-more {
 		@include oColorsFor(o-subs-card-read-more, background text, 80);
 		@include oTypographySansBold(-1);
-		@include oTypographyPadding(1, 1);
+		@include oTypographyPadding($top: 2, $bottom: 2);
 		cursor: pointer;
 
 		border-width: 0;
@@ -97,7 +97,7 @@
 
 		//doesn't use oExpanderToggle mixin, because that mixin has a fixed font-size/icon size
 		&:after {
-			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor(oColorsGetUseCase(o-subs-card-read-more, text)), 24);
+			@include oIconsGetIcon('arrow-down', oColorsGetPaletteColor(oColorsGetUseCase(o-subs-card-read-more, text)), 16);
 			content: '';
 			position: relative;
 			vertical-align: middle;

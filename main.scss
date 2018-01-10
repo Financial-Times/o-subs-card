@@ -18,13 +18,13 @@ $o-subs-card-is-silent: true !default;
 		@include oSubsCard;
 	}
 
-	.o-subs-card--premium {
-		@include oSubsCardPremium;
-	}
-
-	.o-subs-card--premium-plus {
-		@include oSubsCardPremiumPlus;
-	}
+	// .o-subs-card--premium {
+	// 	@include oSubsCardPremium;
+	// }
+  //
+	// .o-subs-card--premium-plus {
+	// 	@include oSubsCardPremiumPlus;
+	// }
 
 	.o-subs-card--discount {
 		@include oSubsCardDiscount;
