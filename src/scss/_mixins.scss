@@ -9,9 +9,9 @@
 	align-items: stretch;
 	width: 100%;
 
-	@include oGridRespondTo(L) {
-		height: 100%;
-	}
+	// @include oGridRespondTo(L) {
+	// 	height: 100%;
+	// }
 
 	.o-subs-card__copy-offer {
 		@include oTypographySans(3);
@@ -70,13 +70,8 @@
 	.o-subs-card__copy-details {
 		@include oExpanderContent();
 		text-align: left;
-
-		@include oGridRespondTo(L) {
-			&[aria-hidden='true'] {
-				display: block;
-			}
-		};
 	}
+
 
 	.o-subs-card__copy-benefits {
 		padding: 12px 20px 0;
