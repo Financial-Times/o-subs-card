@@ -1,14 +1,12 @@
-// @mixin oSubsCardPremium {
-// 	.o-subs-card__select-button {
-// 		@include oButtonsTheme($theme: (background: oColorsGetUseCase(o-subs-card-premium-top, background), accent: 'white'));
-// 	}
-// }
-//
-// @mixin oSubsCardPremiumPlus {
-// 	.o-subs-card__select-button {
-// 		@include oButtonsTheme($theme: (background: oColorsGetUseCase(o-subs-card-premium-plus-top, background), accent: "white"));
-// 	}
-// }
+@mixin oSubsCardB2B {
+	@include oColorsFor('o-subs-card-b2b');
+	background: oColorsGetUseCase(o-subs-card-b2b, background);
+
+	.o-subs-card__select-button {
+		@include oButtonsTheme(inverse);
+	}
+}
+
 
 @mixin oSubsCardDiscount {
 	.o-subs-card__copy-title {

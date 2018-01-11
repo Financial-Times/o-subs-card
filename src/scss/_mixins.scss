@@ -1,18 +1,16 @@
 @mixin oSubsCard {
 	@include oTypographySans(0);
-	@include oColorsFor('o-subs-card-copy-details', 'background');
+	@include oColorsFor('o-subs-card');
 	@include oTypographyMargin($top: 3, $bottom: 3);
 
+	background: oColorsGetUseCase('o-subs-card', 'background');
+	color: oColorsGetUseCase('o-subs-card', 'text');
 	text-align: center;
 	align-items: stretch;
 	width: 100%;
 
 	@include oGridRespondTo(L) {
 		height: 100%;
-	}
-
-	.o-subs-card__top {
-		@include oColorsFor(o-subs-card-top);
 	}
 
 	.o-subs-card__copy-offer {
@@ -37,7 +35,7 @@
 	}
 
 	.o-subs-card__copy-pitch {
-		@include oColorsFor(o-subs-card-copy-pitch, background text, 80);
+		// @include oColorsFor(o-subs-card-copy-pitch, text, 80);
 		@include oTypographySans(0);
 		@include oTypographyPadding($bottom: 8);
 
@@ -65,14 +63,13 @@
 
 	.o-subs-card__select-button {
 		@include oButtons('big');
-		@include oButtonsCustomTheme(oColorsGetUseCase(o-subs-card-top-button, background), "white");
+		@include oButtonsCustomTheme(oColorsGetUseCase(o-subs-card-button, background), "white");
 		@include oTypographyMargin($bottom: 1);
 		width: calc(100% - 24px);
 	}
 
 	.o-subs-card__copy-details {
 		@include oExpanderContent();
-		@include oColorsFor(o-subs-card-copy-details, background text, 80);
 		text-align: left;
 
 		@include oGridRespondTo(L) {
