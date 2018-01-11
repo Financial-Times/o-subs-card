@@ -1,9 +1,16 @@
 @mixin oSubsCardB2B {
 	@include oColorsFor('o-subs-card-b2b');
 	background: oColorsGetUseCase(o-subs-card-b2b, background);
+	color: oColorsGetUseCase(o-subs-card-b2b, text);
+
+	.o-subs-card__copy-title:first-child {
+		@include oTypographyMargin($bottom: 1);
+		padding: 20px 24px 0;
+	}
 
 	.o-subs-card__select-button {
 		@include oButtonsTheme(inverse);
+		padding: 0;
 	}
 }
 

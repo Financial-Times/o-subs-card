@@ -35,7 +35,6 @@
 	}
 
 	.o-subs-card__copy-pitch {
-		// @include oColorsFor(o-subs-card-copy-pitch, text, 80);
 		@include oTypographySans(0);
 		@include oTypographyPadding($bottom: 8);
 
