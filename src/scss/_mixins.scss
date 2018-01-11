@@ -9,10 +9,6 @@
 	align-items: stretch;
 	width: 100%;
 
-	// @include oGridRespondTo(L) {
-	// 	height: 100%;
-	// }
-
 	.o-subs-card__copy-offer {
 		@include oTypographySans(3);
 		@include oTypographyPadding($top: 5);
@@ -41,19 +37,6 @@
 		display: inline-block;
 		width: calc(100% - 28px);
 		text-align: center;
-	}
-
-	// Mobile first
-	.o-subs-card__copy-image {
-		display: none;
-	}
-
-	// Tablet
-	@include oGridRespondTo(M) {
-		.o-subs-card__copy-image {
-			display: block;
-			margin: auto;
-		}
 	}
 
 	.o-subs-card__charge {

@@ -74,6 +74,25 @@ subsCard.init();
 ```
 This will instantiate all subs-cards within the document. Alternatively you can pass in a HTMLElement, or String to be used as a selector to limit the scope of the instantiated subs cards to only child elements of the passed in scope.
 
+## Migration Guide
+
+### Upgrading from v1.x.x to v2.x.x
+
+o-subs-card v2.x.x changes the underlying style of all cards, removes some themes and adds another, and has updated markup. In this version, the expanding functionality is limited to the mobile and tablet viewports.
+
+Thee following themes have been removed:
+
+```diff
+- oSubsCardPremium / 'o-subs-card--premium'
+- oSubsCardPremiumPlus / 'o-subs-card--premium-plus'
+```
+
+And the available themes (and their respective classes) are now:  
+
+```diff
++ oSubsCardB2B / 'o-subs-card--b2b'
+oSubsCardDiscount / 'o-subs-card--discount' //no change
+```
 ---
 
 ## Contact
