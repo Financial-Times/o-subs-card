@@ -16,26 +16,34 @@
 	}
 
 	.o-subs-card__copy-offer {
-		@include oTypographySans(2);
-		@include oTypographyPadding($top: 2);
+		@include oTypographySans(3);
+		@include oTypographyPadding($top: 5);
+		//overwrite oTypography line-height for, well, height.
+		line-height: 1;
 	}
 
 	.o-subs-card__copy-title {
 		@include oTypographySansBold(3);
-		@include oTypographyMargin($bottom: 6);
+		@include oTypographyMargin($bottom: 5);
 
 		&:first-child {
-			@include oTypographyPadding($top: 6);
+			@include oTypographyPadding($top: 8);
+		}
+
+		//Handle the height change when there is an offer in place
+		&:nth-child(2) {
+			@include oTypographyMargin($bottom: 2);
 		}
 	}
 
 	.o-subs-card__copy-pitch {
 		@include oColorsFor(o-subs-card-copy-pitch, background text, 80);
 		@include oTypographySans(0);
+		@include oTypographyPadding($bottom: 8);
+
 		display: inline-block;
 		width: calc(100% - 28px);
 		text-align: center;
-		padding: 14px;
 	}
 
 	// Mobile first
@@ -52,18 +60,13 @@
 	}
 
 	.o-subs-card__charge {
-		@include oTypographyPadding($top: 2, $bottom: 2);
-		@include oTypographyMargin($top: 2);
-	}
-
-	.o-subs-card__charge__value {
-		@include oTypographyMargin($top: 1);
+		@include oTypographyPadding($bottom: 2);
 	}
 
 	.o-subs-card__select-button {
 		@include oButtons('big');
 		@include oButtonsCustomTheme(oColorsGetUseCase(o-subs-card-top-button, background), "white");
-		@include oTypographyMargin($top: 3);
+		@include oTypographyMargin($bottom: 1);
 		width: calc(100% - 24px);
 	}
 
@@ -80,7 +83,7 @@
 	}
 
 	.o-subs-card__copy-benefits {
-		padding: 0 20px;
+		padding: 12px 20px 0;
 		margin: 0;
 		list-style: none;
 
