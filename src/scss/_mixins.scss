@@ -52,7 +52,7 @@
 	}
 
 	.o-subs-card__charge {
-		@include oTypographyPadding($top: 2, $bottom: 1);
+		@include oTypographyPadding($top: 2, $bottom: 2);
 		@include oTypographyMargin($top: 2);
 	}
 
@@ -77,6 +77,16 @@
 				display: block;
 			}
 		};
+	}
+
+	.o-subs-card__copy-benefits {
+		padding: 0 20px;
+		margin: 0;
+		list-style: none;
+
+		li {
+			@include oTypographyPadding($bottom: 3);
+		}
 	}
 
 	.o-subs-card__read-more {
@@ -107,31 +117,6 @@
 
 		.core & {
 			display: none;
-		}
-	}
-
-	.o-subs-card__copy-preamble {
-		@include oTypographySansBold();
-		padding: 20px 20px 0;
-	}
-
-	.o-subs-card__copy-benefits {
-		@include oTypographyListUnordered();
-		padding: 0 20px 20px;
-		margin: 0;
-
-		// for the case where there is no o-subs-card__copy-preamble
-		&:first-child {
-			@include oTypographyPadding($top: 5);
-		}
-
-		/* override a few oTypographyListUnordered styles */
-		li {
-			padding-left: 16px;
-			&:before {
-				font-size: 24px;
-				top: -1px;
-			}
 		}
 	}
 }
