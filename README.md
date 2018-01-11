@@ -8,6 +8,7 @@ This component is used for showing information about various FT subscription pac
 	- [Markup](#markup)
 	- [Sass](#sass)
 	- [JS](#js)
+	- [Migration Guide](#)
 - [Contact](#contact)
 - [Licence](#licence)
 
@@ -23,10 +24,9 @@ The subs card will expand to fill the width of its containing element, so you wi
 <div class="o-subs-card" data-o-component="o-subs-card">
 	<div class="o-subs-card__top">
 		<div class="o-subs-card__copy-title">Subscription title</div>
-		<img class="o-subs-card__copy-image" src='/demos/src/demo-placeholder.png' alt='photo of FT subscription options'>
 		<div class="o-subs-card__charge">
-			<span class="o-subs-card__charge__value">£XX.XX</span> per week
 			<button class="o-subs-card__select-button">Select</button>
+			<div class="o-subs-card__charge__value">£XX.XX per week</div>
 		</div>
 	</div>
 	<div class="o-subs-card__copy-pitch">Access to FT.com on your desktop, mobile and tablet</div>
@@ -48,9 +48,8 @@ As with all Origami components, o-subs-card has a [silent mode](http://origami.f
 #### Themes
 
 The subs card standard theme is teal. To differentiate amongst different subscription tiers, there are some additional themes which you can use with either the mixin or concrete classes:
-- `oSubsCardPremium` / `o-subs-card--premium`
-- `oSubsCardPremiumPlus` / `o-subs-card--premium-plus`
 - `oSubsCardDiscount` / `o-subs-card--discount`
+- `oSubsCardB2B` / `o-subs-card--b2b`
 
 ### JavaScript
 
@@ -78,7 +77,7 @@ This will instantiate all subs-cards within the document. Alternatively you can 
 
 ### Upgrading from v1.x.x to v2.x.x
 
-o-subs-card v2.x.x changes the underlying style of all cards, removes some themes and adds another, and has updated markup. In this version, the expanding functionality is limited to the mobile and tablet viewports.
+o-subs-card v2.x.x changes the underlying style of all cards, removes two themes, adds a new B2B variation, and has updated markup. In this version, the expanding functionality is limited to the mobile and tablet viewports.
 
 Thee following themes have been removed:
 
@@ -93,6 +92,33 @@ And the available themes (and their respective classes) are now:
 + oSubsCardB2B / 'o-subs-card--b2b'
 oSubsCardDiscount / 'o-subs-card--discount' //no change
 ```
+
+The markup has been rearranged, and  some classes have been removed.
+
+```diff
+<div class="o-subs-card" data-o-component="o-subs-card">
+	<div class="o-subs-card__top">
+		<div class="o-subs-card__copy-title">Subscription title</div>
+-		<img class="o-subs-card__copy-image" src='/demos/src/demo-placeholder.png' alt='photo of FT subscription options'>
+		<div class="o-subs-card__charge">
+-			<span class="o-subs-card__charge__value">£XX.XX</span> per week
+			<button class="o-subs-card__select-button">Select</button>
++			<div class="o-subs-card__charge__value">£XX.XX per week </div>
+		</div>
+	</div>
+-	<div class="o-subs-card__copy-pitch">Access to FT.com on your desktop, mobile and tablet</div>
+		<div class="o-subs-card__expander">
+- 		<div class='o-subs-card__read-more'>Read more</div>
+			<div class="o-subs-card__copy-details">
+				<ul class="o-subs-card__copy-benefits">
+					<li>...</li>
+				</ul>
+			</div>
++			<div class='o-subs-card__read-more'>Read more</div>
+		</div>
+</div>
+```
+
 ---
 
 ## Contact
