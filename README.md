@@ -81,7 +81,7 @@ This will instantiate all subs-cards within the document. Alternatively you can 
 
 o-subs-card v2.x.x changes the underlying style of all cards, removes two themes, adds a new B2B variation, and has updated markup. In this version, the expanding functionality is limited to the mobile and tablet viewports.
 
-Thee following themes have been removed:
+The following themes have been removed:
 
 ```diff
 - oSubsCardPremium / 'o-subs-card--premium'
