@@ -20,7 +20,20 @@
 		@include oTypographyMargin($bottom: 4);
 	}
 
+	.o-subs-card__copy-offer {
+		@include oTypographySans(3);
+		@include oTypographyPadding($top: 5);
+		//overwrite oTypography line-height for, well, height.
+		line-height: 1;
+		color: oColorsGetColorFor(o-subs-card-discount, text);
+	}
+
 	.o-subs-card__select-button {
 		@include oButtonsTheme($theme: (background: oColorsGetUseCase(o-subs-card-discount, background), accent: "white"));
+	}
+
+	.o-subs-card__charge__value {
+
+		color: oColorsGetColorFor(o-subs-card-discount, text)
 	}
 }

@@ -8,13 +8,6 @@
 	margin: 12px;
 	width: 100%;
 
-	.o-subs-card__copy-offer {
-		@include oTypographySans(3);
-		@include oTypographyPadding($top: 5);
-		//overwrite oTypography line-height for, well, height.
-		line-height: 1;
-	}
-
 	.o-subs-card__copy-title {
 		@include oTypographySansBold(3);
 		@include oTypographyMargin($bottom: 5);
