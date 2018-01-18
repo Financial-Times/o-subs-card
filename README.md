@@ -21,22 +21,24 @@ This component is largely Sass styles, but there is a small amount of JavaScript
 The subs card will expand to fill the width of its containing element, so you will need to build your own container system depending on how you want to arrange your page. An example of several subs packages together in a collection can be seen in the demos on the [registry](http://registry.origami.ft.com/components/o-subs-card)
 
 ```html
-<div class="o-subs-card" data-o-component="o-subs-card">
-	<div class="o-subs-card__top">
-		<div class="o-subs-card__copy-title">Subscription title</div>
-		<div class="o-subs-card__charge">
-			<button class="o-subs-card__select-button">Select</button>
-			<div class="o-subs-card__charge__value">£XX.XX per week</div>
+<div class='o-subs-card__container'>
+	<div class="o-subs-card" data-o-component="o-subs-card">
+		<div class="o-subs-card__top">
+			<div class="o-subs-card__copy-title">Subscription title</div>
+			<div class="o-subs-card__charge">
+				<button class="o-subs-card__select-button">Select</button>
+				<div class="o-subs-card__charge__value">£XX.XX per week</div>
+			</div>
 		</div>
-	</div>
-	<div class="o-subs-card__copy-pitch">Access to FT.com on your desktop, mobile and tablet</div>
-	<div class="o-subs-card__expander">
-		<div class="o-subs-card__copy-details">
-			<ul class="o-subs-card__copy-benefits">
-				<li>...</li>
-			</ul>
+		<div class="o-subs-card__copy-pitch">Access to FT.com on your desktop, mobile and tablet</div>
+		<div class="o-subs-card__expander">
+			<div class="o-subs-card__copy-details">
+				<ul class="o-subs-card__copy-benefits">
+					<li>...</li>
+				</ul>
+			</div>
+			<div class='o-subs-card__read-more'>Read more</div>
 		</div>
-		<div class='o-subs-card__read-more'>Read more</div>
 	</div>
 </div>
 ```
@@ -93,31 +95,38 @@ And the available themes (and their respective classes) are now:
 oSubsCardDiscount / 'o-subs-card--discount' //no change
 ```
 
-The markup has been rearranged, and  some classes have been removed.
+The markup has been rearranged, and some classes have been removed.
 
 ```diff
-<div class="o-subs-card" data-o-component="o-subs-card">
-	<div class="o-subs-card__top">
-		<div class="o-subs-card__copy-title">Subscription title</div>
--		<img class="o-subs-card__copy-image" src='/demos/src/demo-placeholder.png' alt='photo of FT subscription options'>
-		<div class="o-subs-card__charge">
--			<span class="o-subs-card__charge__value">£XX.XX</span> per week
-			<button class="o-subs-card__select-button">Select</button>
-+			<div class="o-subs-card__charge__value">£XX.XX per week </div>
-		</div>
-	</div>
--	<div class="o-subs-card__copy-pitch">Access to FT.com on your desktop, mobile and tablet</div>
-		<div class="o-subs-card__expander">
-- 		<div class='o-subs-card__read-more'>Read more</div>
-			<div class="o-subs-card__copy-details">
-				<ul class="o-subs-card__copy-benefits">
-					<li>...</li>
-				</ul>
++ <div class='o-subs-card__container'>
+		<div class="o-subs-card" data-o-component="o-subs-card">
+			<div class="o-subs-card__top">
+				<div class="o-subs-card__copy-title">Subscription title</div>
+		-		<img class="o-subs-card__copy-image" src='/demos/src/demo-placeholder.png' alt='photo of FT subscription options'>
+				<div class="o-subs-card__charge">
+		-			<span class="o-subs-card__charge__value">£XX.XX</span> per week
+					<button class="o-subs-card__select-button">Select</button>
+		+			<div class="o-subs-card__charge__value">£XX.XX per week </div>
+				</div>
 			</div>
-+			<div class='o-subs-card__read-more'>Read more</div>
+		-	<div class="o-subs-card__copy-pitch">Access to FT.com on your desktop, mobile and tablet</div>
+				<div class="o-subs-card__expander">
+		- 		<div class='o-subs-card__read-more'>Read more</div>
+					<div class="o-subs-card__copy-details">
+						<ul class="o-subs-card__copy-benefits">
+							<li>...</li>
+						</ul>
+					</div>
+		+			<div class='o-subs-card__read-more'>Read more</div>
+				</div>
 		</div>
-</div>
++ </div>
 ```
+- There is now a container to wrap all cards in.
+- The `<img>` tag has been removed.
+- The charge value has been moved into a `div` of its down and has been moved below the 'select' button.
+- The read more element has been moved to be the last child in the card.
+
 
 ---
 
