@@ -1,12 +1,11 @@
 @mixin oSubsCard {
 	@include oTypographySans(0);
 	@include oColorsFor('o-subs-card');
-	@include oTypographyMargin($top: 3, $bottom: 3);
 
 	background: oColorsGetUseCase('o-subs-card', 'background');
 	color: oColorsGetUseCase('o-subs-card', 'text');
 	text-align: center;
-	align-items: stretch;
+	margin: 12px;
 	width: 100%;
 
 	.o-subs-card__copy-offer {
@@ -95,5 +94,33 @@
 		.core & {
 			display: none;
 		}
+	}
+}
+
+@mixin oSubsCardContainer {
+	display: flex;
+	flex-direction: column;
+
+	@include oGridRespondTo(L) {
+		flex-direction: row;
+	}
+	.o-subs-card,
+	.o-subs-card__top {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.o-subs-card__top {
+		flex: 1 0 auto;
+	}
+
+	.o-subs-card__copy-pitch {
+		margin: 0 0 32px 0;
+		padding: 0 12px;
+	}
+
+	.o-subs-card__charge {
+		justify-self: flex-end;
 	}
 }

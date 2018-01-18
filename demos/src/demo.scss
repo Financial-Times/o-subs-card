@@ -10,15 +10,19 @@ body {
 
 }
 
-.demo_container {
-	@include oGridContainer();
-	margin-top: 20px;
-}
-.demo_subs-card-row {
-	@include oGridRow();
-	align-items: stretch;
+// .demo_container {
+// 	@include oGridContainer();
+// 	margin-top: 20px;
+// }
+// .demo_subs-card-row {
+// 	@include oGridRow();
+// 	align-items: stretch;
+//
+// 	.demo_subs-card-container {
+// 		@include oGridColspan((default: 12, L: 3));
+// 	}
+// }
 
-	.demo_subs-card-container {
-		@include oGridColspan((default: 12, L: 3));
-	}
+.o-subs-card__container {
+	@include oSubsCardContainer();
 }
