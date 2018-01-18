@@ -6,7 +6,10 @@
 	color: oColorsGetUseCase('o-subs-card', 'text');
 	text-align: center;
 	margin: 12px;
-	width: 100%;
+
+	@include oGridRespondTo(L) {
+		width: 100%;
+	}
 
 	.o-subs-card__copy-title {
 		@include oTypographySansBold(3);
