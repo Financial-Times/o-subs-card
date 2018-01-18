@@ -33,7 +33,6 @@
 	}
 
 	.o-subs-card__charge__value {
-
-		color: oColorsGetColorFor(o-subs-card-discount, text)
+		color: oColorsGetColorFor(o-subs-card-discount, text);
 	}
 }
