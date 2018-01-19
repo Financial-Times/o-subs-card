@@ -59,13 +59,12 @@
 		text-align: left;
 	}
 
-
 	.o-subs-card__copy-benefits {
 		@include oTypographyPadding($top: 3);
 
 		padding-right: $o-subs-card-horizontal-padding;
 		padding-left: $o-subs-card-horizontal-padding;
-		
+
 		margin: 0;
 		list-style: none;
 
@@ -108,7 +107,7 @@
 
 @mixin oSubsCardContainer {
 	display: table-cell; // ie 9
-	border-spacing: 12px; //ie 9
+	border-spacing: $o-subs-card-horizontal-margin; //ie 9
 
 	display: flex;  //sass-lint:disable-line no-duplicate-properties
 	flex-direction: column;
@@ -119,8 +118,8 @@
 
 	.o-subs-card {
 		@include oTypographyMargin($top: 3, $bottom: 3);
-		margin-left: 12px;
-		margin-right: 12px;
+		margin-left: $o-subs-card-horizontal-margin / 2; // no collapsing margins in display flex
+		margin-right: $o-subs-card-horizontal-margin / 2;
 	}
 
 	.o-subs-card,

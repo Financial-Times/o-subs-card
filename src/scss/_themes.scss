@@ -5,12 +5,13 @@
 
 	.o-subs-card__copy-title:first-child {
 		@include oTypographyMargin($bottom: 1);
-		padding: 20px 24px 0;
+		@include oTypographyPadding($top: 6);
+		padding-right: $o-subs-card-horizontal-padding;
+		padding-left: $o-subs-card-horizontal-padding;
 	}
 
 	.o-subs-card__select-button {
 		@include oButtonsTheme(inverse);
-		padding: 0;
 	}
 }
 
