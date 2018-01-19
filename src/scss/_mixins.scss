@@ -94,17 +94,14 @@
 }
 
 @mixin oSubsCardContainer {
-	display: flex;
+	display: table-cell; // ie 9
+	border-spacing: 12px; //ie 9
+
+	display: flex;  //sass-lint:disable-line no-duplicate-properties
 	flex-direction: column;
 
 	@include oGridRespondTo(L) {
 		flex-direction: row;
-	}
-	.o-subs-card,
-	.o-subs-card__top {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 	}
 
 	.o-subs-card {
@@ -113,11 +110,21 @@
 		margin-right: 12px;
 	}
 
+	.o-subs-card,
+	.o-subs-card__top {
+		display: table-cell; //ie 9
+		display: flex; //sass-lint:disable-line no-duplicate-properties
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
 	.o-subs-card__top {
 		flex: 1 0 auto;
 	}
 
 	.o-subs-card__charge {
 		justify-self: flex-end;
+		position: relative;
+		bottom: 0;
 	}
 }
