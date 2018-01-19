@@ -108,7 +108,9 @@
 	}
 
 	.o-subs-card {
-		margin: 12px;
+		@include oTypographyMargin($top: 3, $bottom: 3);
+		margin-left: 12px;
+		margin-right: 12px;
 	}
 
 	.o-subs-card__top {
