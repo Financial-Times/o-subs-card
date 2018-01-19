@@ -5,7 +5,6 @@
 	background: oColorsGetUseCase('o-subs-card', 'background');
 	color: oColorsGetUseCase('o-subs-card', 'text');
 	text-align: center;
-	margin: 12px;
 
 	// https://github.com/philipwalton/flexbugs#flexbug-17 (for suport in ie 9/10)
 	@include oGridRespondTo(L) {
@@ -32,7 +31,6 @@
 		@include oTypographyPadding($bottom: 8);
 
 		display: inline-block;
-		width: calc(100% - 28px);
 		text-align: center;
 	}
 
@@ -110,13 +108,12 @@
 		justify-content: space-between;
 	}
 
-	.o-subs-card__top {
-		flex: 1 0 auto;
+	.o-subs-card {
+		margin: 12px;
 	}
 
-	.o-subs-card__copy-pitch {
-		margin: 0 0 32px;
-		padding: 0 12px;
+	.o-subs-card__top {
+		flex: 1 0 auto;
 	}
 
 	.o-subs-card__charge {
