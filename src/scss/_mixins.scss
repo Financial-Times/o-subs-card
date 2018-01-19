@@ -57,6 +57,10 @@
 	.o-subs-card__copy-details {
 		@include oExpanderContent();
 		text-align: left;
+
+		.core & {
+			display: block;
+		}
 	}
 
 	.o-subs-card__copy-benefits {
@@ -113,6 +117,7 @@
 	flex-direction: column;
 
 	@include oGridRespondTo(L) {
+		display: flex;  //sass-lint:disable-line no-duplicate-properties
 		flex-direction: row;
 	}
 
