@@ -12,6 +12,13 @@
 		min-width: 0;
 	}
 
+	.o-subs-card__top {
+		@include oTypographyPadding($bottom: 0);
+
+		padding-right: $o-subs-card-horizontal-padding;
+		padding-left: $o-subs-card-horizontal-padding;
+	}
+
 	.o-subs-card__copy-title {
 		@include oTypographySansBold(3);
 		@include oTypographyMargin($bottom: 5);
@@ -32,6 +39,8 @@
 
 		display: inline-block;
 		text-align: center;
+		// padding-right: $o-subs-card-horizontal-padding;
+		// padding-left: $o-subs-card-horizontal-padding;
 	}
 
 	.o-subs-card__charge {
@@ -42,7 +51,7 @@
 		@include oButtons('big');
 		@include oButtonsCustomTheme(oColorsGetUseCase(o-subs-card-button, background), "white");
 		@include oTypographyMargin($bottom: 1);
-		width: calc(100% - 24px);
+		width: 100%;
 	}
 
 	.o-subs-card__copy-details {
@@ -52,7 +61,11 @@
 
 
 	.o-subs-card__copy-benefits {
-		padding: 12px 20px 0;
+		@include oTypographyPadding($top: 3);
+
+		padding-right: $o-subs-card-horizontal-padding;
+		padding-left: $o-subs-card-horizontal-padding;
+		
 		margin: 0;
 		list-style: none;
 
@@ -115,7 +128,6 @@
 		display: table-cell; //ie 9
 		display: flex; //sass-lint:disable-line no-duplicate-properties
 		flex-direction: column;
-		justify-content: space-between;
 	}
 
 	.o-subs-card__top {
@@ -124,7 +136,6 @@
 
 	.o-subs-card__charge {
 		justify-self: flex-end;
-		position: relative;
-		bottom: 0;
+		margin-top: auto;
 	}
 }
