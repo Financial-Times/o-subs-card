@@ -62,4 +62,4 @@ class SubsCard {
 	}
 }
 
-export default SubsCard;
+module.exports = SubsCard;
