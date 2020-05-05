@@ -1,14 +1,14 @@
 @mixin oSubsCard {
 	@include oTypographySans(0);
 
-	text-align: center;
-
 	// https://github.com/philipwalton/flexbugs#flexbug-17 (for suport in ie 9/10)
 	@include oGridRespondTo(L) {
 		// 12px = the combined 6px padding either side.
 		flex: 0 1 calc(25% - 12px);
 		min-width: 0;
 	}
+
+	text-align: center;
 
 	.o-subs-card__top {
 		color: oColorsByName('black');
@@ -93,6 +93,10 @@
 	.o-subs-card__read-more {
 		@include oTypographySans($scale: -1, $weight: 'semibold');
 
+		@include oGridRespondTo(L) {
+			display: none;
+		}
+
 		background-color: oColorsByName('wheat');
 		border-width: 0;
 		color: oColorsByName('teal-50');
@@ -101,10 +105,6 @@
 		padding-bottom: oSpacingByName('s2');
 		padding-top: oSpacingByName('s2');
 		width: 100%;
-
-		@include oGridRespondTo(L) {
-			display: none;
-		}
 
 		//doesn't use oExpanderToggle mixin, because that mixin has a fixed font-size/icon size
 		&:after {
@@ -177,13 +177,6 @@
 }
 
 @mixin oSubsCardContainer {
-	border-spacing: $o-subs-card-horizontal-margin; //ie 9
-	display: table-cell; // ie 9
-	display: flex;	//sass-lint:disable-line no-duplicate-properties
-	flex-direction: column;
-	flex: auto;
-	margin: 0 20px;
-	padding: 10px 0;
 
 	@include oGridRespondTo(M) {
 		flex-direction: row;
@@ -201,6 +194,13 @@
 			flex: 1;
 		}
 	}
+	border-spacing: $o-subs-card-horizontal-margin; //ie 9
+	display: table-cell; // ie 9
+	display: flex;	//sass-lint:disable-line no-duplicate-properties
+	flex-direction: column;
+	flex: auto;
+	margin: 0 20px;
+	padding: 10px 0;
 
 	.o-subs-card {
 		// no collapsing margins in display flex
