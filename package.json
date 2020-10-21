@@ -1,5 +1,5 @@
 {
-    "name": "o-subs-card",
+    "name": "@financial-times/o-subs-card",
     "devDependencies": {
         "eslint": "^7.8.1",
         "eslint-config-origami-component": "^2.1.0",
