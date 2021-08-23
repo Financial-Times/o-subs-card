@@ -35,7 +35,7 @@ The subs card will expand to fill the width of its containing element, so you wi
 					<li>...</li>
 				</ul>
 			</div>
-			<div class='o-subs-card__read-more'>Read more</div>
+			<button class='o-subs-card__read-more'></button>
 		</div>
 	</div>
 </div>

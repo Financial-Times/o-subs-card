@@ -83,13 +83,13 @@ The markup has been rearranged, and some classes have been removed.
 			</div>
 -			<div class="o-subs-card__copy-pitch">Access to FT.com on your desktop, mobile and tablet</div>
 				<div class="o-subs-card__expander">
--		 		<div class='o-subs-card__read-more'>Read more</div>
+-		 		<button class='o-subs-card__read-more'></button>
 					<div class="o-subs-card__copy-details">
 						<ul class="o-subs-card__copy-benefits">
 							<li>...</li>
 						</ul>
 					</div>
-+					<div class='o-subs-card__read-more'>Read more</div>
++					<button class='o-subs-card__read-more'></button>
 				</div>
 		</div>
 + </div>
