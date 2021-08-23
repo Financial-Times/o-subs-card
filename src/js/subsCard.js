@@ -19,7 +19,7 @@ class SubsCard {
 		}
 	}
 
-	setExpanders(rootEl) {
+	setExpanders() {
 		const expander = this.rootEl.querySelector('.o-subs-card__expander');
 		const title = this.rootEl.querySelector('.o-subs-card__copy-title').textContent;
 		const opts = {
