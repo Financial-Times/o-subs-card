@@ -24,8 +24,8 @@ class SubsCard {
 		const titleElem = this.rootEl.querySelector('.o-subs-card__copy-title');
 		const opts = {
 			shrinkTo: 'hidden',
-			collapsedToggleText: titleElem ? `Read More <span class="o-normalise-visually-hidden">about ${title.textContent}</span>` : 'Read More',
-			expandedToggleText: titleElem ? `Read Less <span class="o-normalise-visually-hidden">about ${title.textContent}</span>` : 'Read Less',
+			collapsedToggleText: titleElem ? `Read More <span class="o-normalise-visually-hidden">about ${titleElem.textContent}</span>` : 'Read More',
+			expandedToggleText: titleElem ? `Read Less <span class="o-normalise-visually-hidden">about ${titleElem.textContent}</span>` : 'Read Less',
 			toggleState: 'all',
 			selectors: {
 				toggle: '.o-subs-card__read-more',
