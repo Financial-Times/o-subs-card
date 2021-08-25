@@ -1,5 +1,23 @@
 # Migration Guide
 
+## Migrating from v5 to v6
+
+Component HTML markup section used to expand for reading more/less info about the card is updated. It used to trigger by the div and now it is updated to Button.
+
+The label of it has added dynamic text to it for screen reader users based on the title of the card `Read more about Print`. It is added by this `function this.setExpanders() in subCard.js`. Below is the difference after function this.setExpanders() adds span element for screen reader users.
+
+```diff
+- <div class='o-subs-card__read-more'>Read more</div>
++ <button class="o-subs-card__read-more">Read More <span class="o-subs-card-visually-hidden">about Standard Digital</span></button>
+```
+
+A new CSS class has been added to have visually hidden elements but to be used for screen reader users.
+```
+.o-subs-card-visually-hidden {
+    @include oNormaliseVisuallyHidden;
+}
+```
+
 ## Migrating from v4 to v5
 
 The mixin `oSubsCard` has been renamed to `oSubsCardBase`.
