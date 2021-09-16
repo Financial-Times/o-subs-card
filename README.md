@@ -1,5 +1,11 @@
 # o-subs-card [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](#licence)
 
+***
+
+**This component has moved to the [Origami Component System](https://github.com/Financial-Times/origami).**
+
+***
+
 This component is used for showing information about various FT subscription packages.
 
 - [Usage](#usage)
